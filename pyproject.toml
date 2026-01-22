@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minigpt4"
+version = "1.0.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["data*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "shell*"]
+
+[tool.wheel]
+exclude = ["data*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "shell*"]
